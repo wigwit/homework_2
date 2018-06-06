@@ -14,13 +14,11 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
-    int compute_sum();
+
 
 private slots:
     void on_actionGrading_Scheme_triggered();
-
-    void on_pushButton_clicked();
-
+    void compute_sum(int unused);
 private:
     Ui::MainWindow *ui;
 };

@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[4];
-    char stringdata[69];
+    QByteArrayData data[5];
+    char stringdata[66];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -32,10 +32,11 @@ static const qt_meta_stringdata_MainWindow_t qt_meta_stringdata_MainWindow = {
 QT_MOC_LITERAL(0, 0, 10),
 QT_MOC_LITERAL(1, 11, 33),
 QT_MOC_LITERAL(2, 45, 0),
-QT_MOC_LITERAL(3, 46, 21)
+QT_MOC_LITERAL(3, 46, 11),
+QT_MOC_LITERAL(4, 58, 6)
     },
     "MainWindow\0on_actionGrading_Scheme_triggered\0"
-    "\0on_pushButton_clicked\0"
+    "\0compute_sum\0unused\0"
 };
 #undef QT_MOC_LITERAL
 
@@ -54,11 +55,11 @@ static const uint qt_meta_data_MainWindow[] = {
 
  // slots: name, argc, parameters, tag, flags
        1,    0,   24,    2, 0x08,
-       3,    0,   25,    2, 0x08,
+       3,    1,   25,    2, 0x08,
 
  // slots: parameters
     QMetaType::Void,
-    QMetaType::Void,
+    QMetaType::Void, QMetaType::Int,    4,
 
        0        // eod
 };
@@ -69,11 +70,10 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         MainWindow *_t = static_cast<MainWindow *>(_o);
         switch (_id) {
         case 0: _t->on_actionGrading_Scheme_triggered(); break;
-        case 1: _t->on_pushButton_clicked(); break;
+        case 1: _t->compute_sum((*reinterpret_cast< int(*)>(_a[1]))); break;
         default: ;
         }
     }
-    Q_UNUSED(_a);
 }
 
 const QMetaObject MainWindow::staticMetaObject = {

@@ -7,8 +7,18 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    ui->sum->setText("Overall Grade: "+QString::number(compute_sum()));
-
+    connect(ui->horizontalSlider_1, SIGNAL(valueChanged(int)),this,SLOT(compute_sum(int)));
+    connect(ui->horizontalSlider_2, SIGNAL(valueChanged(int)),this,SLOT(compute_sum(int)));
+    connect(ui->horizontalSlider_3, SIGNAL(valueChanged(int)),this,SLOT(compute_sum(int)));
+    connect(ui->horizontalSlider_4, SIGNAL(valueChanged(int)),this,SLOT(compute_sum(int)));
+    connect(ui->horizontalSlider_5, SIGNAL(valueChanged(int)),this,SLOT(compute_sum(int)));
+    connect(ui->horizontalSlider_6, SIGNAL(valueChanged(int)),this,SLOT(compute_sum(int)));
+    connect(ui->horizontalSlider_7, SIGNAL(valueChanged(int)),this,SLOT(compute_sum(int)));
+    connect(ui->horizontalSlider_8, SIGNAL(valueChanged(int)),this,SLOT(compute_sum(int)));
+    connect(ui->horizontalSlider_9, SIGNAL(valueChanged(int)),this,SLOT(compute_sum(int)));
+    connect(ui->horizontalSlider_10, SIGNAL(valueChanged(int)),this,SLOT(compute_sum(int)));
+    connect(ui->horizontalSlider_11, SIGNAL(valueChanged(int)),this,SLOT(compute_sum(int)));
+    ui->sum->show();
 }
 
 MainWindow::~MainWindow()
@@ -23,7 +33,7 @@ void MainWindow::on_actionGrading_Scheme_triggered()
     g.exec();
 }
 
-int MainWindow::compute_sum()
+void MainWindow::compute_sum(int unused=0)
 {
     int sum=0;
     int score=0;
@@ -50,11 +60,6 @@ int MainWindow::compute_sum()
             score=0.4*(ui->horizontalSlider_10->value())+0.5*ui->horizontalSlider_11->value();
     }
 
-    return 0.1*sum+score;
+    ui->sum->setText("Overall Grade: "+QString::number(0.1*sum+score));
 }
 
-void MainWindow::on_pushButton_clicked()
-{
-
-
-}

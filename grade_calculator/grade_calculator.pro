@@ -26,15 +26,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    grading_scheme.cpp \
-    dialog.cpp
+    grading_scheme.cpp
 
 HEADERS += \
         mainwindow.h \
-    grading_scheme.h \
-    dialog.h
+    grading_scheme.h
 
 FORMS += \
     grading_scheme.ui \
-    dialog.ui \
     mainwindow.ui

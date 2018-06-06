@@ -20,7 +20,6 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
-#include <QtWidgets/QPushButton>
 #include <QtWidgets/QRadioButton>
 #include <QtWidgets/QSlider>
 #include <QtWidgets/QSpinBox>
@@ -72,12 +71,11 @@ public:
     QSlider *horizontalSlider_8;
     QSpinBox *spinBox_8;
     QLabel *sum;
-    QPushButton *pushButton;
-    QWidget *widget;
+    QWidget *layoutWidget1;
     QVBoxLayout *verticalLayout_2;
     QRadioButton *radioButton;
     QRadioButton *radioButton_2;
-    QWidget *widget1;
+    QWidget *layoutWidget2;
     QVBoxLayout *verticalLayout_6;
     QVBoxLayout *verticalLayout_3;
     QHBoxLayout *horizontalLayout;
@@ -298,32 +296,29 @@ public:
         sum = new QLabel(centralWidget);
         sum->setObjectName(QStringLiteral("sum"));
         sum->setGeometry(QRect(390, 440, 141, 31));
-        pushButton = new QPushButton(centralWidget);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(390, 460, 80, 16));
-        widget = new QWidget(centralWidget);
-        widget->setObjectName(QStringLiteral("widget"));
-        widget->setGeometry(QRect(350, 330, 151, 81));
-        verticalLayout_2 = new QVBoxLayout(widget);
+        layoutWidget1 = new QWidget(centralWidget);
+        layoutWidget1->setObjectName(QStringLiteral("layoutWidget1"));
+        layoutWidget1->setGeometry(QRect(350, 330, 151, 81));
+        verticalLayout_2 = new QVBoxLayout(layoutWidget1);
         verticalLayout_2->setSpacing(6);
         verticalLayout_2->setContentsMargins(11, 11, 11, 11);
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
-        radioButton = new QRadioButton(widget);
+        radioButton = new QRadioButton(layoutWidget1);
         radioButton->setObjectName(QStringLiteral("radioButton"));
         radioButton->setChecked(true);
 
         verticalLayout_2->addWidget(radioButton);
 
-        radioButton_2 = new QRadioButton(widget);
+        radioButton_2 = new QRadioButton(layoutWidget1);
         radioButton_2->setObjectName(QStringLiteral("radioButton_2"));
 
         verticalLayout_2->addWidget(radioButton_2);
 
-        widget1 = new QWidget(centralWidget);
-        widget1->setObjectName(QStringLiteral("widget1"));
-        widget1->setGeometry(QRect(330, 40, 221, 261));
-        verticalLayout_6 = new QVBoxLayout(widget1);
+        layoutWidget2 = new QWidget(centralWidget);
+        layoutWidget2->setObjectName(QStringLiteral("layoutWidget2"));
+        layoutWidget2->setGeometry(QRect(330, 40, 221, 261));
+        verticalLayout_6 = new QVBoxLayout(layoutWidget2);
         verticalLayout_6->setSpacing(6);
         verticalLayout_6->setContentsMargins(11, 11, 11, 11);
         verticalLayout_6->setObjectName(QStringLiteral("verticalLayout_6"));
@@ -334,12 +329,12 @@ public:
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setSpacing(6);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
-        label_9 = new QLabel(widget1);
+        label_9 = new QLabel(layoutWidget2);
         label_9->setObjectName(QStringLiteral("label_9"));
 
         horizontalLayout->addWidget(label_9);
 
-        spinBox_9 = new QSpinBox(widget1);
+        spinBox_9 = new QSpinBox(layoutWidget2);
         spinBox_9->setObjectName(QStringLiteral("spinBox_9"));
 
         horizontalLayout->addWidget(spinBox_9);
@@ -347,7 +342,7 @@ public:
 
         verticalLayout_3->addLayout(horizontalLayout);
 
-        horizontalSlider_9 = new QSlider(widget1);
+        horizontalSlider_9 = new QSlider(layoutWidget2);
         horizontalSlider_9->setObjectName(QStringLiteral("horizontalSlider_9"));
         horizontalSlider_9->setOrientation(Qt::Horizontal);
 
@@ -362,12 +357,12 @@ public:
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setSpacing(6);
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
-        label_10 = new QLabel(widget1);
+        label_10 = new QLabel(layoutWidget2);
         label_10->setObjectName(QStringLiteral("label_10"));
 
         horizontalLayout_2->addWidget(label_10);
 
-        spinBox_10 = new QSpinBox(widget1);
+        spinBox_10 = new QSpinBox(layoutWidget2);
         spinBox_10->setObjectName(QStringLiteral("spinBox_10"));
 
         horizontalLayout_2->addWidget(spinBox_10);
@@ -375,7 +370,7 @@ public:
 
         verticalLayout_4->addLayout(horizontalLayout_2);
 
-        horizontalSlider_10 = new QSlider(widget1);
+        horizontalSlider_10 = new QSlider(layoutWidget2);
         horizontalSlider_10->setObjectName(QStringLiteral("horizontalSlider_10"));
         horizontalSlider_10->setOrientation(Qt::Horizontal);
 
@@ -390,12 +385,12 @@ public:
         horizontalLayout_10 = new QHBoxLayout();
         horizontalLayout_10->setSpacing(6);
         horizontalLayout_10->setObjectName(QStringLiteral("horizontalLayout_10"));
-        label_11 = new QLabel(widget1);
+        label_11 = new QLabel(layoutWidget2);
         label_11->setObjectName(QStringLiteral("label_11"));
 
         horizontalLayout_10->addWidget(label_11);
 
-        spinBox_11 = new QSpinBox(widget1);
+        spinBox_11 = new QSpinBox(layoutWidget2);
         spinBox_11->setObjectName(QStringLiteral("spinBox_11"));
 
         horizontalLayout_10->addWidget(spinBox_11);
@@ -403,7 +398,7 @@ public:
 
         verticalLayout_5->addLayout(horizontalLayout_10);
 
-        horizontalSlider_11 = new QSlider(widget1);
+        horizontalSlider_11 = new QSlider(layoutWidget2);
         horizontalSlider_11->setObjectName(QStringLiteral("horizontalSlider_11"));
         horizontalSlider_11->setOrientation(Qt::Horizontal);
 
@@ -469,7 +464,6 @@ public:
         label_7->setText(QApplication::translate("MainWindow", "Homework 7", 0));
         label_8->setText(QApplication::translate("MainWindow", "Homework 8", 0));
         sum->setText(QString());
-        pushButton->setText(QApplication::translate("MainWindow", "OK", 0));
         radioButton->setText(QApplication::translate("MainWindow", "Schema A", 0));
         radioButton_2->setText(QApplication::translate("MainWindow", "Schema B", 0));
         label_9->setText(QApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:10pt;\">Midterm 1</span></p></body></html>", 0));
